@@ -12,19 +12,22 @@ export function createGallery(images) {
          <img class="gallery-img" src="${img.previewURL}" alt="${img.tags}" />
          </a>
          <div class="img-info">
-          <div class="like-block"><p>Likes</p>
+          <div class="info-block">
+            <p>
+             Likes
+            </p>
             <p>
               ${img.likes}
              </p>
           </div>
-          <div class="views-block">
+          <div class="info-block">
             <p>
               Views</p>
             <p>
               ${img.views}
             </p>
           </div>
-          <div class="comments-block">
+          <div class="info-block">
             <p>
               Comments
             </p>
@@ -32,7 +35,7 @@ export function createGallery(images) {
               ${img.comments}
             </p>
           </div>
-          <div class="downloads-block">
+          <div class="info-block">
             <p>
               Downloads
             </p>
