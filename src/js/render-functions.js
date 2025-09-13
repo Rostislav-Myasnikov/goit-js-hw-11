@@ -2,7 +2,7 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 export function createGallery(images) {
-  const listEl = document.querySelector('.gallery-list');
+  const listEl = document.querySelector('.gallery');
   listEl.innerHTML = '';
 
   const markup = images
@@ -50,7 +50,7 @@ export function createGallery(images) {
     .join('');
 
   listEl.insertAdjacentHTML('beforeend', markup);
-  const lightbox = new SimpleLightbox('.gallery-list a', {});
+  const lightbox = new SimpleLightbox('.gallery a', {});
   lightbox.refresh();
 }
 

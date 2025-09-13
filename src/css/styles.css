@@ -109,7 +109,7 @@ input:focus {
   margin-bottom: 32px;
 }
 
-.gallery-list {
+.gallery {
   gap: 24px;
   display: flex;
   flex-wrap: wrap;
