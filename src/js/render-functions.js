@@ -55,9 +55,9 @@ export function createGallery(images) {
 }
 
 export function showLoader() {
-  document.getElementById('loader').classList.remove('hidden');
+  document.getElementById('loader').style.display = 'block';
 }
 
 export function hideLoader() {
-  document.getElementById('loader').classList.add('hidden');
+  document.getElementById('loader').style.display = 'none';
 }
