@@ -1,5 +1,5 @@
 import { getImagesByQuery } from './js/pixabay-api.js';
-import { createGallery } from './js/render-function.js';
+import { createGallery, showLoader, hideLoader } from './js/render-function.js';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
@@ -10,8 +10,20 @@ formEl.addEventListener('submit', e => {
   e.preventDefault();
 
   const query = e.currentTarget.elements['search-text'].value.trim();
-
-  getImagesByQuery(query).then(images => {
-    createGallery(images);
-  });
+  showLoader();
+  getImagesByQuery(query)
+    .then(images => {
+      if (images.length === 0) {
+        return iziToast.show({
+          message:
+            'Sorry, there are no images matching your search query. Please try again!',
+          position: 'topRight',
+          color: 'red',
+        });
+      }
+      createGallery(images);
+    })
+    .finally(() => {
+      hideLoader();
+    });
 });

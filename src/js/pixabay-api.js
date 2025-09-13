@@ -17,14 +17,7 @@ export function getImagesByQuery(query) {
     })
     .then(res => {
       console.log(res.data.hits);
-      if ((res.data.hits, length === 0)) {
-        return iziToast.show({
-          message:
-            'Sorry, there are no images matching your search query. Please try again!',
-          position: 'topRight',
-          color: red,
-        });
-      }
+
       return res.data.hits;
     })
     .catch(error => {
