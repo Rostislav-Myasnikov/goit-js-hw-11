@@ -3,19 +3,22 @@ import{a,S as c,i as l}from"./assets/vendor-C0nyh4Ze.js";(function(){const r=doc
          <img class="gallery-img" src="${e.previewURL}" alt="${e.tags}" />
          </a>
          <div class="img-info">
-          <div class="like-block"><p>Likes</p>
+          <div class="info-block">
+            <p>
+             Likes
+            </p>
             <p>
               ${e.likes}
              </p>
           </div>
-          <div class="views-block">
+          <div class="info-block">
             <p>
               Views</p>
             <p>
               ${e.views}
             </p>
           </div>
-          <div class="comments-block">
+          <div class="info-block">
             <p>
               Comments
             </p>
@@ -23,7 +26,7 @@ import{a,S as c,i as l}from"./assets/vendor-C0nyh4Ze.js";(function(){const r=doc
               ${e.comments}
             </p>
           </div>
-          <div class="downloads-block">
+          <div class="info-block">
             <p>
               Downloads
             </p>
@@ -33,5 +36,5 @@ import{a,S as c,i as l}from"./assets/vendor-C0nyh4Ze.js";(function(){const r=doc
           </div>
         </div>
       </div>
-      </li>`).join("");r.insertAdjacentHTML("beforeend",o),new c(".gallery-list a",{}).refresh()}function p(){document.getElementById("loader").classList.remove("hidden")}function f(){document.getElementById("loader").classList.add("hidden")}document.querySelector("button");document.querySelector("input");const m=document.querySelector("form");m.addEventListener("submit",s=>{s.preventDefault();const r=s.currentTarget.elements["search-text"].value.trim();p(),d(r).then(o=>{if(o.length===0)return l.show({message:"Sorry, there are no images matching your search query. Please try again!",position:"topRight",color:"red"});u(o)}).finally(()=>{f()})});
+      </li>`).join("");r.insertAdjacentHTML("beforeend",o),new c(".gallery-list a",{}).refresh()}function f(){document.getElementById("loader").classList.remove("hidden")}function p(){document.getElementById("loader").classList.add("hidden")}document.querySelector("button");document.querySelector("input");const m=document.querySelector("form");m.addEventListener("submit",s=>{s.preventDefault();const r=s.currentTarget.elements["search-text"].value.trim();f(),d(r).then(o=>{if(o.length===0)return l.show({message:"Sorry, there are no images matching your search query. Please try again!",position:"topRight",color:"red"});u(o)}).finally(()=>{p()})});
 //# sourceMappingURL=index.js.map
