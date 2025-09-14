@@ -16,11 +16,10 @@ export function getImagesByQuery(query) {
       },
     })
     .then(res => {
-      console.log(res.data.hits);
-
       return res.data.hits;
     })
     .catch(error => {
+      console.error('error:', error);
       return [];
     });
 }

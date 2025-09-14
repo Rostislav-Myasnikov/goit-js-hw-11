@@ -55,9 +55,13 @@ export function createGallery(images) {
 }
 
 export function showLoader() {
-  document.getElementById('loader').style.display = 'block';
+  const loader = document.querySelector('.loader');
+  loader.style.display = 'block';
+  // document.getElementById('loader').style.display = 'block';
 }
 
 export function hideLoader() {
-  document.getElementById('loader').style.display = 'none';
+  const loader = document.querySelector('.loader');
+  loader.style.display = 'none';
+  // document.getElementById('loader').style.display = 'none';
 }
